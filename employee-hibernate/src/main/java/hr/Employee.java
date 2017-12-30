@@ -14,6 +14,9 @@ public class Employee implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
+    @ManyToOne
+    private Department department;
+
     public Integer getId() {
         return id;
     }
@@ -36,5 +39,13 @@ public class Employee implements Serializable {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

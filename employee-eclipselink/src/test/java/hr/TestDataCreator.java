@@ -41,13 +41,12 @@ public class TestDataCreator {
 
         john.setAddress(marktgasse);
 
+        john.setDepartment(department);
         department.addEmployee(john);
 
         Employee mary = new Employee();
         mary.setName("Mary");
         em.persist(mary);
-
-        department.addEmployee(mary);
 
         Address bahnhofstrasse = new Address();
         bahnhofstrasse.setStreet("Bahhofstrasse");
@@ -56,6 +55,9 @@ public class TestDataCreator {
         bahnhofstrasse.setCity(zurich);
 
         mary.setAddress(bahnhofstrasse);
+
+        mary.setDepartment(department);
+        department.addEmployee(mary);
 
         em.persist(department);
 
