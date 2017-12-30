@@ -10,6 +10,8 @@
         <class>hr.Employee</class>
         <class>hr.Department</class>
         <class>hr.Address</class>
+        <class>hr.City</class>
+        <class>hr.Country</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:example;create=true"/>

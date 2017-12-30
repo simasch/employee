@@ -2,8 +2,8 @@ package hr;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Address {
@@ -11,7 +11,11 @@ public class Address {
     @Id
     @GeneratedValue
     private Integer id;
-    private String city;
+    private String street;
+    private String number;
+
+    @ManyToOne(optional = false)
+    private City city;
 
     public Integer getId() {
         return id;
@@ -21,11 +25,27 @@ public class Address {
         this.id = id;
     }
 
-    public String getCity() {
+    public City getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(City city) {
         this.city = city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

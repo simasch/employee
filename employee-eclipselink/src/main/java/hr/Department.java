@@ -1,6 +1,9 @@
 package hr;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +16,7 @@ public class Department implements Serializable {
 	private Integer id;
 	private String name;
 
-	@OneToMany(cascade = CascadeType.PERSIST)
+	@OneToMany
 	private List<Employee> employees = new ArrayList<>();
 
 	public Integer getId() {
