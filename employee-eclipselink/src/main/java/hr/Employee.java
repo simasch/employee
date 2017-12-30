@@ -1,25 +1,18 @@
-package org.example.persistence;
+package hr;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 public class Employee implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Integer id;
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
-
-    public Employee() {
-    }
-
-    public Employee(String name) {
-        this.name = name;
-    }
 
     public Integer getId() {
         return id;

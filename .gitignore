@@ -22,3 +22,5 @@
 hs_err_pid*
 /.idea
 *.iml
+/employee-eclipselink/employee-eclipselink.iml
+/employee-hibernate/employee-hibernate.iml
